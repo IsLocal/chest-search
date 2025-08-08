@@ -9,6 +9,11 @@ import net.minecraft.core.item.ItemStack;
 
 import java.util.Comparator;
 
+/**
+ * @author rootEnginear
+ * This class contains various utility methods.
+ * <a href="https://github.com/rootEnginear/bta-rootenginear-mods/blob/sort-chest/src/main/java/rootenginear/sortchest/utils/Utils.java">...</a>
+ */
 @Environment(EnvType.CLIENT)
 public class Utils {
 	public static boolean isNotChest(Object object) {
