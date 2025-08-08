@@ -35,6 +35,7 @@ version = mod_version
 loom {
     noIntermediateMappings()
     customMinecraftMetadata.set("https://downloads.betterthanadventure.net/bta-client/$bta_channel/v$bta_version/manifest.json")
+	accessWidenerPath = file("src/main/resources/chestsearch.accesswidener")
 }
 
 repositories {

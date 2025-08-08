@@ -1,0 +1,4 @@
+gui.options.page.chestsearch.title=Chest Search
+options.preserve_search=Preserve Search
+options.clear_button=Clear Button
+button.chestsearch.tip=(You can remove this page in .minecraft/config/chestsearch.properties)

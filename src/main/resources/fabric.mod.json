@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "chestsearch",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Chest Search",
+  "description": "Search through chests.",
   "authors": [
-    "Turnip Labs"
+    "IsLocal"
   ],
   "contact": {
     "homepage": "",
@@ -14,30 +14,22 @@
   },
 
 	"icon": "icon.png",
-  "license": "CC0-1.0",
+  "license": "MIT",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
-    ],
-		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
-		]
+			"local.chestsearch.ChestSearch"
+    ]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+		"chestsearch.mixins.json"
   ],
-
+	"accessWidener": "chestsearch.accesswidener",
   "depends": {
 		"minecraft": "*",
-    "fabricloader": ">=0.15.5"
+    "fabricloader": ">=0.15.5",
+		"halplibe": ">=5.2.4"
   },
   "suggests": {
   }
