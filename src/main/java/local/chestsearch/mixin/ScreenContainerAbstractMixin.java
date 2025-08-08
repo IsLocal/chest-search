@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = ScreenContainerAbstract.class, remap = false)
-public abstract class ScreenContainerMixin extends Screen {
+public abstract class ScreenContainerAbstractMixin extends Screen {
 
 	@Shadow
 	public int xSize;
@@ -75,10 +75,6 @@ public abstract class ScreenContainerMixin extends Screen {
 	public void chestsearch$tick(CallbackInfo ci) {
 		if (Utils.isNotChest(this)) return;
 
-		if (ChestSearch.clearButton.value && !this.buttons.contains(SearchFieldAccessor.INSTANCE.getClearButtonRendering())) {
-			this.buttons.add(SearchFieldAccessor.INSTANCE.getClearButtonRendering());
-		}
-
 		searchField.updateCursorCounter();
 	}
 
@@ -107,6 +103,9 @@ public abstract class ScreenContainerMixin extends Screen {
 	@Inject(method = "render", at=@At("TAIL"))
 	public void chestSearch$drawGuiContainerForegroundLayer(CallbackInfo ci) {
 		if (Utils.isNotChest(this)) return;
+		if (ChestSearch.clearButton.value && !this.buttons.contains(SearchFieldAccessor.INSTANCE.getClearButtonRendering())) {
+			this.buttons.add(SearchFieldAccessor.INSTANCE.getClearButtonRendering());
+		}
 		searchField.drawTextBox();
 
 	}

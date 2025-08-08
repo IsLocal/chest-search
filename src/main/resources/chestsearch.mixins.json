@@ -8,7 +8,7 @@
   "client": [
     "ItemElementMixin",
     "MinecraftMixin",
-    "ScreenContainerMixin"
+    "ScreenContainerAbstractMixin"
   ],
   "injectors": {
     "defaultRequire": 1
